@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    --red: #cf1d1d;
+    --dark-red: #820405;
+    --gray: #d5d5d5;
+    --black: #1b1b1b;
+}
+
+@keyframes direita-esquerda {
+    0% {
+        height: 1.5vh;
+        right: -100%;
+    }
+    
+    50% {
+        right: 0;
+        height: 1.5vh;
+        overflow: hidden;
+    }
+}
+
+@keyframes esquerda-direita {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 0;
+    }
+    
+}
+
+body {
+    display: flex;
+    background-color: var(--black);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside, main {
+    position: relative;
+    height: 90vh;
+    padding: 1vw;
+    border: 5px solid #fff;
+    border-radius: 25px;
+    animation-duration: 2s;
+}
+
+aside {
+    background: url('img/logo.png') no-repeat center 90%, linear-gradient(var(--red), var(--dark-red));
+    background-size: contain;
+    border-left: none;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    max-width: 25vw;
+    animation-name: esquerda-direita;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 70vw;
+    background: linear-gradient(var(--red), var(--dark-red));
+    animation-name: direita-esquerda;
+}
+
+.texto-display {
+    color: #fff;
+    max-width: 60vw;
+    height: 90vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: auto;
+    animation-name: direita-esquerda;
+    animation-duration: 2s;
+}
+
+.texto-display-vazio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    text-align: center;
+}
+
+.texto-display::-webkit-scrollbar {
+    margin-right: 30px;
+    width: 10px;
+    height: 300px;
+}
+
+/* Track */
+.texto-display::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.texto-display::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.texto-display::-webkit-scrollbar-thumb:hover {
+    background: var(--black);
+    max-height: 80vh;
+    border: 1px solid #fff;
+}
+
+#formulario {
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#formulario input,
+select {
+    border: none;
+    border-radius: 3px;
+    height: 1.25rem;
+    line-height: normal;
+    display: flex;
+    width: 80%;
+    padding: 0.5px;
+}
+
+#formulario select {
+    width: 100%;
+    cursor: pointer;
+}
+
+#data-form input {
+    text-align: center;
+    width: 10%;
+    min-width: 20px;
+    margin-right: 5px;
+}
+
+#data-form #ano-input {
+    width: 25%;
+    min-width: 25px;
+}
+
+#gerar-texto-btn {
+    background-color: #fff;
+    font-size: 1rem;
+    width: -webkit-fill-available;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-top: 5px;
+    transition: 300ms;
+}
+
+#gerar-texto-btn:hover,
+#gerar-texto-btn:focus {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--black);
+    transition: 300ms;
+}
+
+#formulario input:focus,
+select:focus {
+    outline: none;
+}
+
+#formulario div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: -webkit-fill-available;
+    min-height: 1.8rem;
+}
+
+#formulario label {
+    line-height: normal;
+    width: 20%;
+    min-width: 50px;
+}
+
+#formulario .checkbox {
+    width: 100%;
+    flex-wrap: wrap;
+    accent-color: var(--black);
+}
+
+#formulario .checkboxes {
+    margin-right: 5px;
+    width: 16px;
+}
+
+#formulario .checkbox input, label {
+    cursor: pointer;
+}
+
+#formulario .checkbox label {
+    min-width: fit-content;
+}
+
+#radios {
+    flex-wrap: wrap;
+}
+
+#radios div {
+    width: 100px;
+}
+
+#radios div:hover,
+#radios input:hover,
+#radios label:hover {
+    cursor: pointer;
+}
+
+#radios label {
+    width: auto;
+}
+
+#radios input {
+    width: 16px;
+    margin-right: 5px;
+    accent-color: var(--black);
+}

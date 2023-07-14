@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://janicelamas.com.br/wp-content/themes/janice/assets/images/favicon.ico"
+    rel="shortcut icon" type="image/x-icon">
+  <title>Envio de mensagens</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <aside>
+    <form id="formulario">
+      <div id="data-form">
+        <label for="data-input">Data:</label>
+        <input type="text" id="dia-input" name="data-input" placeholder="DD" />
+        <input type="text" id="mes-input" name="data-input" placeholder="MM" />
+        <input type="text" id="ano-input" name="data-input"
+          placeholder="AAAA" />
+      </div>
+      <div>
+        <label for="hora-input">Hora:</label>
+        <input type="text" id="hora-input" placeholder="HH:MM" maxlength="5" />
+      </div>
+      <div>
+        <label for="nome-input">Nome:</label>
+        <input type="text" id="nome-input"
+          placeholder="Digite o nome do paciente" />
+      </div>
+      <div>
+        <select id="texto-select"
+          onchange=" desmarcaAnalise(), selecionaUnidade(), modificaData()">
+          <option value="0">Abdome total</option>
+          <option value="1">Abdome superior</option>
+          <option value="2">Abdome total + densi 2 segmentos</option>
+          <option value="3">Abdome total + DEXA</option>
+          <option value="4">Abdome superior + densi 2 segmentos</option>
+          <option value="5">Abdome superior + DEXA</option>
+          <option value="6">Densitometria 2 segmentos</option>
+          <option value="7">Densitometria corpo inteiro</option>
+          <option value="8">Densi 2 + DEXA</option>
+          <option value="9">Pélvica abdominal / próstata</option>
+          <option value="10">Mamografia / ultrassonografia mamária</option>
+          <option value="11">Exames de rotina / sem preparos</option>
+          <option value="12">Dr. Alexander (aorta / veia cava)</option>
+          <option value="13">Dr. Alexander (aorta / veia cava) + densi 2
+            segmentos</option>
+          <option value="14">Dr. Alexander (aorta / veia cava) + DEXA</option>
+          <option value="15">Nutrição online</option>
+          <option value="16">Nutrição presencial</option>
+        </select>
+      </div>
+      <div class="checkbox">
+        <div id="sem-consulta">
+          <input type="checkbox" id="checkbox-consulta" class="checkboxes" onchange="analise()">
+          <label for="checkbox-consulta">Sem consulta</label>
+        </div>
+        <div id="analise">
+          <input type="checkbox" id="checkbox-analise" class="checkboxes" onchange="analise()">
+          <label for="checkbox-analise">Em análise</label>
+        </div>
+      </div>
+      <div id="radios">
+        <div>
+          <input type="radio" name="unidade-input" class="radio" id="radio-asa"
+            value="asa sul" onclick="modificaData()" />
+          <label for="radio-asa">Asa Sul</label>
+        </div>
+        <div>
+          <input type="radio" name="unidade-input" class="radio"
+            id="radio-lago" value="lago sul" onclick="modificaData()" />
+          <label for="radio-lago">Lago Sul</label>
+        </div>
+      </div>
+    </form>
+    <button id="gerar-texto-btn" onclick="gerarTexto()">Gerar texto</button>
+  </aside>
+
+  <main>
+    <div id="texto-container">VAZIO</div>
+  </main>
+</body>
+<script src="assets/script.js"></script>
+<script src="assets/data_inicial.js"></script>
+
+</html>
