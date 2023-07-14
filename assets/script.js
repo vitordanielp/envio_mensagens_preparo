@@ -41,7 +41,7 @@ function analise() {
 
 
 function desmarcaAnalise() {
-    checkbox.checked = false
+    checkboxAnalise.checked = false
 }
 
 
@@ -235,7 +235,9 @@ const textos_tarde = [
 function copiarTexto(texto) {
     /* Insere o texto na área de transferência */
     navigator.clipboard.writeText(texto)
-    alert('Texto copiado!')
+    setTimeOut(() => {
+        alert('Texto copiado!');
+    }, 350);
 }
 
 
