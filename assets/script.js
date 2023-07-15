@@ -235,7 +235,7 @@ const textos_tarde = [
 function copiarTexto(texto) {
     /* Insere o texto na área de transferência */
     navigator.clipboard.writeText(texto)
-    setTimeOut(() => {
+    setTimeout(() => {
         alert('Texto copiado!');
     }, 350);
 }
