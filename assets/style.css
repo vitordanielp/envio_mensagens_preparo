@@ -9,13 +9,13 @@
 
 @keyframes direita-esquerda {
     0% {
-        height: 1.5vh;
+        height: 2vh;
         right: -100%;
     }
     
     50% {
         right: 0;
-        height: 1.5vh;
+        height: 2vh;
         overflow: hidden;
     }
 }
