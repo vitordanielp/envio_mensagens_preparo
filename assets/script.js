@@ -54,13 +54,13 @@ function validaData() {
     const ano = document.querySelector('#ano-input').value
     const data = new Date(`${mes}/${dia}/${ano}`)
     let dataFormatada
-
+    
     function formataData() {
         let dia = data.getDate()
         let mes = data.getMonth()
         let ano = data.getFullYear()
         let diaSemana = data.toLocaleString('pt-BR', { weekday: 'long' })
-
+        
         if (dia <= 9 || mes + 1 <= 9) {
             if (dia <= 9 && mes + 1 <= 9) {
                 dataFormatada = `0${dia}/0${mes + 1}/${ano} (${diaSemana})`
@@ -75,9 +75,19 @@ function validaData() {
             dataFormatada = `${dia}/${mes + 1}/${ano} (${diaSemana})`
         }
     }
-
+    
     formataData()
     return dataFormatada
+}
+
+
+function validaNome(){
+    if (nomePacienteInput.value.length <= 10 || !nomePacienteInput.value.includes(' ')) {
+        alert('Informe o nome completo!')
+        nomePacienteInput.focus()
+        return false
+    }
+    return true
 }
 
 
@@ -235,7 +245,7 @@ const textos_tarde = [
 function copiarTexto(texto) {
     /* Insere o texto na área de transferência */
     navigator.clipboard.writeText(texto)
-    setTimeout(() => {
+    setTimeOut(() => {
         alert('Texto copiado!');
     }, 350);
 }
@@ -295,6 +305,9 @@ function gerarTexto() {
         }
     }
 
+    if (!validaNome()){
+        return
+    }
 
     const textoFinal = textoSelecionado.replace("{consulta}", semConsulta()).replace(
         "{analise}", analise()).replace("{tipoExame}", tipoExame()).replace(
@@ -315,14 +328,12 @@ function gerarTexto() {
 }
 // Fim da função gerarTexto
 
+
+
+
 // Event listeners da página
 document.addEventListener("keypress", (e) => {
     if (e.key == 'Enter' && document.activeElement != gerarTextoBtn) {
-        if (nomePacienteInput.value.length <= 12) {
-            alert('Informe o nome completo!')
-            nomePacienteInput.focus()
-            return
-        }
         gerarTexto();
     }
 })
