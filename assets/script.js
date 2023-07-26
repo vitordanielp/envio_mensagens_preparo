@@ -222,6 +222,8 @@ const textos_manha = [
     mamografia,
     rotina,
     alexander,
+    alexanderKit,
+    alexanderDexa
 ]
 
 const textos_tarde = [
@@ -238,6 +240,8 @@ const textos_tarde = [
     mamografia,
     rotina,
     alexander,
+    alexanderKit,
+    alexanderDexa
 ]
 // Fim das listas
 
