@@ -12,7 +12,7 @@
         height: 2vh;
         right: -100%;
     }
-    
+
     50% {
         right: 0;
         height: 2vh;
@@ -28,7 +28,7 @@
     50% {
         left: 0;
     }
-    
+
 }
 
 body {
@@ -41,7 +41,8 @@ body {
     overflow: hidden;
 }
 
-aside, main {
+aside,
+main {
     position: relative;
     height: 90vh;
     padding: 1vw;
@@ -196,7 +197,8 @@ select:focus {
     width: 16px;
 }
 
-#formulario .checkbox input, label {
+#formulario .checkbox input,
+label {
     cursor: pointer;
 }
 
