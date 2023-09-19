@@ -92,10 +92,10 @@ function validaNome() {
 
 
 function tipoExame() {
-    if (textoSelect.value <= 14) {
+    if (textoSelect.value <= 16) {
         return 'o(s) exame(s) agendado(s)'
     }
-    else if (textoSelect.value >= 15) {
+    else if (textoSelect.value >= 17) {
         return 'o horário para realização da sua avaliação nutricional para o'
     }
 }
@@ -104,7 +104,7 @@ function tipoExame() {
 function selecionaUnidade() {
     let asa = document.querySelector('#radio-asa')
     let lago = document.querySelector('#radio-lago')
-    if (textoSelect.value >= 15) {
+    if (textoSelect.value >= 17) {
         if (!asa.checked) {
             asa.checked = true
             alert('Somente Asa Sul!')
@@ -271,11 +271,11 @@ function gerarTexto() {
     let hora = horaInput.value.replace(";", ":")
     let textoSelecionado
 
-    if (textoSelect.value == 15) {
+    if (textoSelect.value == 17) {
         textoSelecionado = `${preTexto.slice(0, 120)} (online).\n\n${nutricaoOnline}\n\n${posTexto.slice(-197)}`
     }
 
-    if (textoSelect.value == 16) {
+    if (textoSelect.value == 18) {
         textoSelecionado = `${preTexto}\n\n${chegarComAntecedencia(tempo)}. ${nutricaoPresencial}\n\n${posTexto}`
     }
 
@@ -305,7 +305,7 @@ function gerarTexto() {
         }
     }
 
-    if (textoSelect.value <= 14) {
+    if (textoSelect.value <= 16) {
         if (Number(hora.slice(0, 2)) < 13) {
             textoSelecionado = `${preTexto}\n\n${chegarComAntecedencia(tempo)}. ${textos_manha[index]}\n\n${posTexto}`
         }
