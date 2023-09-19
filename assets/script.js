@@ -193,6 +193,8 @@ const kitSupT = `${abdSuperiorT}\n\n${densi2}.`
 const kitSupDxaManha = `${abdSuperiorParaKitM}\n\n${densiCorpoInteiroSemJejum}.`
 const kitSupDxaTarde = `${abdSuperiorParaKitT}\n\n${densiCorpoInteiroSemJejum}.`
 const pelvicaAbd = `${bexigaCheia()}.`
+const pelvicaAbdKit = `${bexigaCheia()}.\n${densi2}.`
+const pelvicaAbdKitDxa = `${bexigaCheia()}.\n${densiCorpoInteiro}.`
 const mamografia = `Solicitamos não passar nada oleoso ou cremoso nas mamas e axilas (recomendamos utilizar desodorante em aerosol).`
 const rotina = ``
 const nutricaoOnline = `Para atendimento online será necessário ter instalado o aplicativo WhatsApp e ter se pesado antes da avaliação.\n\nApós a consulta, encaminhar o formulário de atendimento preenchido e anexar foto do identidade e carteirinha do convênio para o e-mail unidadeasasul@janicelamas.com.br.`
@@ -219,6 +221,8 @@ const textos_manha = [
     densiCorpoInteiro,
     densi2Dxa,
     pelvicaAbd,
+    pelvicaAbdKit,
+    pelvicaAbdKitDxa,
     mamografia,
     rotina,
     alexander,
@@ -237,6 +241,7 @@ const textos_tarde = [
     densiCorpoInteiro,
     densi2Dxa,
     pelvicaAbd,
+    pelvicaAbdKit,
     mamografia,
     rotina,
     alexander,
