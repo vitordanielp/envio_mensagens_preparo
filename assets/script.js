@@ -242,6 +242,7 @@ const textos_tarde = [
     densi2Dxa,
     pelvicaAbd,
     pelvicaAbdKit,
+    pelvicaAbdKitDxa,
     mamografia,
     rotina,
     alexander,
