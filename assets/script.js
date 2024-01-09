@@ -268,7 +268,7 @@ function gerarTexto() {
     const nomePaciente = nomePacienteInput.value
     const index = textoSelect.value
     let unidade = Array.from(unidadeRadio).find((r) => r.checked)
-    const tempo = 15
+    const tempo = 20
     let hora = horaInput.value.replace(";", ":")
     let textoSelecionado
 
