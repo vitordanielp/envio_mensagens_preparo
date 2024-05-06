@@ -22,7 +22,7 @@ function completaHora() {
 
 function semConsulta() {
     if (checkboxConsulta.checked) {
-        return "\n\n*Neste dia, os exames de mamografia serão realizados normalmente pelas técnicas, porém não teremos consulta com uma médica após a realização.*"
+        return "\n\n*Neste dia, o exame de mamografia será realizado normalmente pela equipe técnica. Porém não haverá consulta com médico(a) após a realização.*"
     }
     else {
         return ""
@@ -32,7 +32,7 @@ function semConsulta() {
 
 function analise() {
     if (checkboxAnalise.checked) {
-        return "\n\n*O status atual do(s) seu(s) exame(s) é: EM ANÁLISE, caso não esteja(m) autorizado(s) pelo convênio até o horário de realização, o(a) senhor(a) poderá realizar, mediante assinatura de uma guia provisória, que será desconsiderada após o convênio autorizar. Caso não queira realizar a assinatura da guia provisória, nos informe com antecedência, para realizar a remarcação do(s) exame(s).*"
+        return "\n\n*O status atual do(s) seu(s) exame(s) é: EM ANÁLISE, caso não esteja(m) autorizado(s) pelo convênio, entraremos em contato para realizar a remarcação do(s) exame(s).*"
     }
     else {
         return ""
@@ -168,7 +168,7 @@ function equipamentoDensi() {
 
 // Textos padrões utilizados nas mensagens
 const preTexto = 'Clínica Janice Lamas informa:\nPrezado(a): {nomePaciente}{consulta}{analise}\n\nEstamos confirmando {tipoExame} dia {data} às {hora}h na unidade {unidade}.'
-const posTexto = 'Trazer os PEDIDOS MÉDICOS ORIGINAIS com validade de 30 dias, CARTEIRA DO CONVÊNIO E DOCUMENTO DE IDENTIFICAÇÃO.\n\nTrazer exames anteriores para comparação caso tenham sido realizados em outro local.\n\n*O uso de máscara não é obrigatório, conforme decreto n° 43.072 de 10/03/2022.*\n*Usar máscara em ambiente hospitalar é facultativo, porém é recomendado pela Diretoria de Vigilância Sanitária.*\n*Sugerimos que continuem fazendo o uso de máscara (SEM PARTES DE METAL) durante a realização dos exames.*\n\nTempo de permanência na clínica: *50 minutos para cada exame agendado*.\n\n*Pedimos a gentileza de, se possível, não trazer acompanhante, para evitar aglomerações e manter a sua segurança e dos demais pacientes. Caso seja menor de idade, comparecer com apenas 1 acompanhante e chegar no horário marcado.*\n\nQualquer dúvida, entrar em contato com nossa Central de Atendimento 61 3213-5161 (ligação ou Whatsapp).\n\nAgradecemos a confiança em nossos serviços.\nAtenciosamente, Clínica Janice Lamas Radiologia.'
+const posTexto = 'Trazer os PEDIDOS MÉDICOS ORIGINAIS com validade de 30 dias, CARTEIRA DO CONVÊNIO E DOCUMENTO DE IDENTIFICAÇÃO.\n\nTrazer exames anteriores para comparação caso tenham sido realizados em outro local.\n\n*O uso de máscara não é obrigatório, conforme decreto n° 43.072 de 10/03/2022.*\n*Usar máscara em ambiente hospitalar é facultativo, porém é recomendado pela Diretoria de Vigilância Sanitária.*\n*Sugerimos que continuem fazendo o uso de máscara (SEM PARTES DE METAL) durante a realização dos exames.*\n\nTempo de permanência na clínica:\n*Aproximadamente 2 horas até 3 exames*.\n*Acima de 3 exames, até 3 horas de permanência.*\n\n*Pedimos a gentileza de, se possível, não trazer acompanhante, para evitar aglomerações e manter a sua segurança e dos demais pacientes. Caso seja menor de idade, comparecer com apenas 1 acompanhante e chegar no horário marcado.*\n\nQualquer dúvida, entrar em contato com nossa Central de Atendimento 61 3213-5161 (ligação ou Whatsapp).\n\nAgradecemos a confiança em nossos serviços.\nAtenciosamente, Clínica Janice Lamas Radiologia.'
 
 
 // Preparos para exames

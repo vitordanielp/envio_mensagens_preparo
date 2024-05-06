@@ -7,6 +7,8 @@
   <link
     href="https://janicelamas.com.br/wp-content/themes/janice/assets/images/favicon.ico"
     rel="shortcut icon" type="image/x-icon">
+  <link href="https://janicelamas.com.br/wp-content/themes/janice/assets/images/favicon.ico" rel="shortcut icon"
+    type="image/x-icon">
   <title>Envio de mensagens</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -15,24 +17,21 @@
   <aside>
     <form id="formulario">
       <div id="data-form">
-        <label for="dia-input">Data:</label>
+        <label for="dia-input" class="normal-cursor">Data:</label>
         <input type="text" id="dia-input" name="data-input" placeholder="DD" />
         <input type="text" id="mes-input" name="data-input" placeholder="MM" />
-        <input type="text" id="ano-input" name="data-input"
-          placeholder="AAAA" />
+        <input type="text" id="ano-input" name="data-input" placeholder="AAAA" />
       </div>
       <div>
-        <label for="hora-input">Hora:</label>
+        <label for="hora-input" class="normal-cursor">Hora:</label>
         <input type="text" id="hora-input" placeholder="HH:MM" maxlength="5" />
       </div>
       <div>
-        <label for="nome-input">Nome:</label>
-        <input type="text" id="nome-input"
-          placeholder="Digite o nome do paciente" />
+        <label for="nome-input" class="normal-cursor">Nome:</label>
+        <input type="text" id="nome-input" placeholder="Digite o nome do paciente" />
       </div>
       <div>
-        <select id="texto-select"
-          onchange=" desmarcaAnalise(), selecionaUnidade(), modificaData()">
+        <select id="texto-select" onchange=" desmarcaAnalise(), selecionaUnidade(), modificaData()">
           <option value="0">Abdome total</option>
           <option value="1">Abdome superior</option>
           <option value="2">Abdome total + densi 2 segmentos</option>
@@ -57,25 +56,23 @@
       </div>
       <div class="checkbox">
         <div id="sem-consulta">
-          <input type="checkbox" id="checkbox-consulta" class="checkboxes"
-            onchange="analise()">
+          <input type="checkbox" id="checkbox-consulta" class="checkboxes" onchange="analise()">
           <label for="checkbox-consulta">Sem consulta</label>
         </div>
         <div id="analise">
-          <input type="checkbox" id="checkbox-analise" class="checkboxes"
-            onchange="analise()">
+          <input type="checkbox" id="checkbox-analise" class="checkboxes" onchange="analise()">
           <label for="checkbox-analise">Em análise</label>
         </div>
       </div>
       <div id="radios">
         <div>
-          <input type="radio" name="unidade-input" class="radio" id="radio-asa"
-            value="asa sul" onclick="modificaData()" />
+          <input type="radio" name="unidade-input" class="radio" id="radio-asa" value="asa sul"
+            onclick="modificaData()" />
           <label for="radio-asa">Asa Sul</label>
         </div>
         <div>
-          <input type="radio" name="unidade-input" class="radio"
-            id="radio-lago" value="lago sul" onclick="modificaData()" />
+          <input type="radio" name="unidade-input" class="radio" id="radio-lago" value="lago sul"
+            onclick="modificaData()" />
           <label for="radio-lago">Lago Sul</label>
         </div>
       </div>
